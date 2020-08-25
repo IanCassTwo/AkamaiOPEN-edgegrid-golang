@@ -5,6 +5,12 @@ import (
 	client "github.com/akamai/AkamaiOPEN-edgegrid-golang/client-v1"
 )
 
+type FieldMap struct {
+	AlertType string `json:"alertType"`
+	Zone      string `json:"zone"`
+	EmailTo   string `json:"emailTo"`
+}
+
 type Firing struct {
 	FiringID     string      `json:"firingId"`
 	DefinitionID string      `json:"definitionId"`
@@ -12,11 +18,7 @@ type Firing struct {
 	StartTime    time.Time   `json:"startTime"`
 	EndTime      time.Time   `json:"endTime"`
 	Service      string      `json:"service"`
-	FieldMap     struct {
-		AlertType string `json:"alertType"`
-		Zone      string `json:"zone"`
-		EmailTo   string `json:"emailTo"`
-	} `json:"fieldMap"`
+	FieldMap     FieldMap    `json:"fieldMap"`
 }
 
 
