@@ -10,7 +10,7 @@ type Firing struct {
 	DefinitionID string      `json:"definitionId"`
 	Name         string      `json:"name"`
 	StartTime    time.Time   `json:"startTime"`
-	EndTime      interface{} `json:"endTime"`
+	EndTime      time.Time   `json:"endTime"`
 	Service      string      `json:"service"`
 	FieldMap     struct {
 		AlertType string `json:"alertType"`
