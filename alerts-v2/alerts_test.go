@@ -129,4 +129,5 @@ func TestListActiveFirings(t *testing.T) {
 
 	firing := response.Firings[0]
 	assert.Equal(t, "s@136523713", firing.FiringID)
+	
 }
